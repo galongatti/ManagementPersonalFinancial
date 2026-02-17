@@ -9,7 +9,7 @@ namespace Api.UnitTest;
 
 using Moq;
 
-public class UnitTest1
+public class CreateUserTest
 {
     [Fact]
     public async Task Execute_Should_Create_User_When_Valid_Input_Model()

@@ -2,8 +2,9 @@
   <Folder Name="/Solution Items/">
     <File Path="compose.yaml" />
   </Folder>
-  <Project Path="Api.UnitTest/Api.UnitTest.csproj" />
+  <Project Path="Api.Test\Api.Test.csproj" />
   <Project Path="Api\Api.csproj" />
+  <Project Path="Application.Test/Application.Test.csproj" />
   <Project Path="Application/Application.csproj" />
   <Project Path="Domain/Domain.csproj" />
   <Project Path="Infrastructure/Infrastructure.csproj" />
