@@ -1,8 +1,8 @@
 ﻿using System.Net.Mime;
 using Api.Controllers;
 using Application.DTOs.Input;
+using Application.Ports.Inbound;
 using Application.Ports.Outbound;
-using Application.Ports.UsersCaseUse;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Api.UnitTest;
@@ -26,7 +26,7 @@ public class CreateUserTest
         
         var expectedOutput = new Application.DTOs.Output.CreateUserOutput
         {
-            Id = Guid.NewGuid().ToString(),
+            Id = 1,
             Email = input.Email,
             FullName = input.FullName
         };

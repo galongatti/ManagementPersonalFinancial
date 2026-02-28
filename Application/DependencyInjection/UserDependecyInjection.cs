@@ -1,4 +1,4 @@
-using Application.Ports.UsersCaseUse;
+using Application.Ports.Inbound;
 using Application.UseCases.UserCases;
 using Microsoft.Extensions.DependencyInjection;
 

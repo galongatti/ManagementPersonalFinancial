@@ -1,11 +1,12 @@
 using Domain.Entities;
 using Infrastructure.Persistence.Context.EntitiesConfiguration;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Persistence.Context;
 
-public class AppDbContext : IdentityDbContext<User>
+public class AppDbContext : IdentityDbContext<IdentityUser>
 {
     
     public DbSet<FamilyGroup> FamilyGroups { get; set; }

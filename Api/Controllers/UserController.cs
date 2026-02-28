@@ -1,6 +1,6 @@
 using Application.DTOs.Input;
 using Application.DTOs.Output;
-using Application.Ports.UsersCaseUse;
+using Application.Ports.Inbound;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Api.Controllers;

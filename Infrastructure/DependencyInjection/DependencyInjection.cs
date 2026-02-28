@@ -1,4 +1,6 @@
 using Application.Ports.Outbound;
+using Application.Ports.Outbound.Repositories;
+using Infrastructure.Persistence.Repositories;
 using Infrastructure.Persistence.UnitOfWork;
 using Infrastructure.Service;
 using Microsoft.Extensions.Configuration;
@@ -12,6 +14,7 @@ public static class DependencyInjection
     {
         services.AddScoped<IUnitOfWork, UnitOfWork>();
         services.AddScoped<IUserIdentityService, UserIdentityService>();
+        services.AddScoped<IUserRepository, UserRepository>();
     }
     
 }

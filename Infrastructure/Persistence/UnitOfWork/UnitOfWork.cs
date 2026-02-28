@@ -1,5 +1,7 @@
 using Application.Ports.Outbound;
+using Application.Ports.Outbound.Repositories;
 using Infrastructure.Persistence.Context;
+using Infrastructure.Persistence.Repositories;
 using Microsoft.EntityFrameworkCore.Storage;
 
 namespace Infrastructure.Persistence.UnitOfWork;
@@ -9,9 +11,8 @@ public class UnitOfWork(AppDbContext context) : IUnitOfWork
     
     IDbContextTransaction? _transaction;
     
-    // IUserRepository? _userRepository;
-    //
-    // public IUserRepository UserRepository => _userRepository ?? new UserRepository(context);
+    IUserRepository? _userRepository;
+    public IUserRepository userRepository => _userRepository ?? new UserRepository(context);
 
     public async Task SaveAsync(CancellationToken cancellationToken)
     {
